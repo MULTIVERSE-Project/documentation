@@ -2,10 +2,10 @@
 
 <html>
 	<head>
-		<title>Module - Terminal</title>
+		<title>mvp.ui.gradients - Terminal</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Module - Terminal" />
+		<meta property="og:title" content="mvp.ui.gradients - Terminal" />
 		<meta property="og:site_name" content="MULTIVERSE Documentation" />
 
 			<meta property="og:description" content="" />
@@ -1201,7 +1201,7 @@ Sound
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../libraries/mvp.ui.gradients/">mvp.ui.gradients</a></summary>
 
 									<ul>
@@ -1301,7 +1301,7 @@ SanitazeType
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../classes/module/">Module</a></summary>
 
 									<ul>
@@ -1476,7 +1476,7 @@ SetVersion
 
 <header class="module">
 	<div class="module-title">
-		<h1>Module</h1>
+		<h1>mvp.ui.gradients</h1>
 	</div>
 
 	<h2>
@@ -1492,41 +1492,14 @@ SetVersion
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="GetDisabled">
-					<h1><span class="realm shared"></span></span>Module:GetDisabled()</h1>
+				<a class="anchor" id="mvp.ui.gradients.CreateHTMLGradient">
+					<h1><span class="realm client"></span></span>mvp.ui.gradients.CreateHTMLGradient(id, w, h, rotation, cornerRadius, startColor, endColor, ignoreCache, manual)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L116">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/ui/cl_gradients.lua#L66">View source &raquo;</a>
 
-					<p>Checks if module is disabled</p>
-			</header>
-
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>is module disabled</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Hook">
-					<h1><span class="realm shared"></span></span>Module:Hook(name, func, customID)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L63">View source &raquo;</a>
-
-					<p>Creates always unique hook for module.</p>
+					<p>Creates a gradient material from HTML</p>
 			</header>
 
 
@@ -1536,37 +1509,108 @@ SetVersion
 					<ul>
 
 							<li>
-								<span class="tag parameter">name</span>
+								<span class="tag parameter">id</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> The name of the hook.</p>
+								<p> The id of the gradient for caching purposes</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">func</span>
+								<span class="tag parameter">w</span>
 
-									<span class="tag"><span class="type">function</span></span>
+									<span class="tag"><span class="type">number</span></span>
 
 
-								<p> The function to call.</p>
+								<p> The width</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">customID</span>
+								<span class="tag parameter">h</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The height</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">rotation</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
-									<span class="tag default">optional</span>
 
-								<p> Custom ID for hook.</p>
+								<p> The rotation</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">cornerRadius</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The corner radius</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">startColor</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The start color</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">endColor</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The end color</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ignoreCache</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+
+								<p> Whether to ignore the cache</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">manual</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+
+								<p> Whether to return the HTML panel</p>
 							</li>
 					</ul>
 
@@ -1577,23 +1621,31 @@ SetVersion
 							<li>
 									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
 
-								<p>The hook ID.</p>
+								<p>The id of the gradient</p>
 							</li>
 
 				</ul>
 
+				<h3>Example Usage</h3>
+					<pre><code>local gradient = mvp.ui.gradients.CreateHTMLGradient("test", 100, 100, "0deg", "0px", "rgba(32,32,32,1)", "rgba(51,51,51,1)")
+mvp.ui.gradients.DrawHTMLGradient(gradient, 0, 0, 100, 100)
+</code></pre>
 
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/mvp.ui.gradients/#mvp.ui.gradients.DrawHTMLGradient">mvp.ui.gradients.DrawHTMLGradient</a></li>
+				</ul>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="Include">
-					<h1><span class="realm shared"></span></span>Module:Include(path)</h1>
+				<a class="anchor" id="mvp.ui.gradients.DeleteHTMLGradient">
+					<h1><span class="realm client"></span></span>mvp.ui.gradients.DeleteHTMLGradient(id)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L38">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/ui/cl_gradients.lua#L164">View source &raquo;</a>
 
-					<p>Includes a file relative to the module's directory.</p>
+					<p>Deletes a gradient material from HTML</p>
 			</header>
 
 
@@ -1603,28 +1655,35 @@ SetVersion
 					<ul>
 
 							<li>
-								<span class="tag parameter">path</span>
+								<span class="tag parameter">id</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> The file to include.</p>
+								<p> The id of the gradient</p>
 							</li>
 					</ul>
 
 
+				<h3>Example Usage</h3>
+					<pre><code>mvp.ui.gradients.DeleteHTMLGradient("test")
+</code></pre>
 
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/mvp.ui.gradients/#mvp.ui.gradients.CreateHTMLGradient">mvp.ui.gradients.CreateHTMLGradient</a></li>
+				</ul>
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="IncludeFolder">
-					<h1><span class="realm shared"></span></span>Module:IncludeFolder(path)</h1>
+				<a class="anchor" id="mvp.ui.gradients.DrawGradient">
+					<h1><span class="realm client"></span></span>mvp.ui.gradients.DrawGradient(x, y, w, h, r, startColor, endColor)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L49">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/ui/cl_gradients.lua#L17">View source &raquo;</a>
 
-					<p>Includes a folder relative to the module's directory.</p>
+					<p>Draws a gradient</p>
 			</header>
 
 
@@ -1634,51 +1693,176 @@ SetVersion
 					<ul>
 
 							<li>
-								<span class="tag parameter">path</span>
+								<span class="tag parameter">x</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The x position</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">y</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The y position</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">w</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The width</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">h</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The height</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">r</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The rotation</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">startColor</span>
+
+									<span class="tag"><span class="type">Color</span></span>
+
+
+								<p> The start color</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">endColor</span>
+
+									<span class="tag"><span class="type">Color</span></span>
+
+
+								<p> The end color</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.ui.gradients.DrawHTMLGradient">
+					<h1><span class="realm client"></span></span>mvp.ui.gradients.DrawHTMLGradient(id, x, y, w, h)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/ui/cl_gradients.lua#L147">View source &raquo;</a>
+
+					<p>Draws a gradient material from HTML</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">id</span>
 
 									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
 
 
-								<p> The folder to include.</p>
+								<p> The id of the gradient</p>
 							</li>
 					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetDisabled">
-					<h1><span class="realm shared"></span></span>Module:SetDisabled(disabled)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L101">View source &raquo;</a>
-
-					<p>Disables module.
- You need server restart to apply changes.</p>
-
-<p> This should be used only on server side to take effect, although it will work on client side too, but will have no effect.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">disabled</span>
+								<span class="tag parameter">x</span>
 
-									<span class="tag"><span class="type">bool</span></span>
+									<span class="tag"><span class="type">number</span></span>
 
 
-								<p> Should module be disabled?</p>
+								<p> The x position</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">y</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The y position</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">w</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The width</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">h</span>
+
+									<span class="tag"><span class="type">number</span></span>
+
+
+								<p> The height</p>
 							</li>
 					</ul>
 
 
+				<h3>Example Usage</h3>
+					<pre><code>local gradient = mvp.ui.gradients.CreateHTMLGradient("test", 100, 100, "0deg", "0px", "rgba(32,32,32,1)", "rgba(51,51,51,1)")
+mvp.ui.gradients.DrawHTMLGradient(gradient, 0, 0, 100, 100)
+</code></pre>
 
+				<h3>See Also</h3>
+				<ul>
+						<li><a href="../../libraries/mvp.ui.gradients/#mvp.ui.gradients.CreateHTMLGradient">mvp.ui.gradients.CreateHTMLGradient</a></li>
+				</ul>
 		</section>
 
 					</div>

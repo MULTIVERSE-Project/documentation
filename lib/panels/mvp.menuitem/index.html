@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Module - Terminal</title>
+		<title>mvp.MenuItem - Terminal</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Module - Terminal" />
+		<meta property="og:title" content="mvp.MenuItem - Terminal" />
 		<meta property="og:site_name" content="MULTIVERSE Documentation" />
 
-			<meta property="og:description" content="" />
+			<meta property="og:description" content="This is the base panel for all options, you can use this to create your own custom options." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -448,7 +448,7 @@ SetMinimumWidth
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../panels/mvp.menuitem/">mvp.MenuItem</a></summary>
 
 									<ul>
@@ -1301,7 +1301,7 @@ SanitazeType
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../classes/module/">Module</a></summary>
 
 									<ul>
@@ -1476,12 +1476,11 @@ SetVersion
 
 <header class="module">
 	<div class="module-title">
-		<h1>Module</h1>
+		<h1>mvp.MenuItem</h1>
+			<p>Inheriths from <a href="../../panels/mvp.button/#">mvp.Button</a></p>
 	</div>
 
-	<h2>
-
-</h2>
+	<h2>This is the base panel for all options, you can use this to create your own custom options.</h2>
 </header>
 
 <p>
@@ -1492,14 +1491,14 @@ SetVersion
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="GetDisabled">
-					<h1><span class="realm shared"></span></span>Module:GetDisabled()</h1>
+				<a class="anchor" id="GetData">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:GetData()</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L116">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L39">View source &raquo;</a>
 
-					<p>Checks if module is disabled</p>
+					<p>Gets the data that is passed to the function that is called when this option is clicked.</p>
 			</header>
 
 
@@ -1508,9 +1507,11 @@ SetVersion
 				<ul>
 
 							<li>
-									<span class="type">bool</span>
+									<span class="type">any</span>
 
-								<p>is module disabled</p>
+								<p>
+
+</p>
 							</li>
 
 				</ul>
@@ -1519,14 +1520,107 @@ SetVersion
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="Hook">
-					<h1><span class="realm shared"></span></span>Module:Hook(name, func, customID)</h1>
+				<a class="anchor" id="GetDisplayText">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:GetDisplayText()</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L63">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L73">View source &raquo;</a>
 
-					<p>Creates always unique hook for module.</p>
+					<p>Gets the text that is displayed when this option selected in <a href="../../panels/mvp.menu/#">mvp.Menu</a>. </p>
+
+<p> Used by <a href="../../panels/mvp.menu/#">mvp.Menu</a> to display the selected option. You should override this function to return the text that should be displayed.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetMenu">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:GetMenu()</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L17">View source &raquo;</a>
+
+					<p>Gets the menu that this option is in.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<a class="type" href="../../classes/panel/#">Panel</a>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="GetOnClick">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:GetOnClick()</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L28">View source &raquo;</a>
+
+					<p>Gets the function that is called when this option is clicked.</p>
+			</header>
+
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">function</span>
+
+								<p>
+
+</p>
+							</li>
+
+				</ul>
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetData">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:SetData(data)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L35">View source &raquo;</a>
+
+					<p>Sets the data that is passed to the function that is called when this option is clicked.</p>
 			</header>
 
 
@@ -1536,14 +1630,72 @@ SetVersion
 					<ul>
 
 							<li>
-								<span class="tag parameter">name</span>
+								<span class="tag parameter">data</span>
 
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+									<span class="tag"><span class="type">any</span></span>
 
 
-								<p> The name of the hook.</p>
+								<p>
+
+</p>
 							</li>
 					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetMenu">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:SetMenu(menu)</h1>
+				</a>
+
+					<div class="notice error">
+						<div class="title">Internal</div>
+						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
+					</div>
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L12">View source &raquo;</a>
+
+					<p>Sets the menu that this option is in.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">menu</span>
+
+									<span class="tag"><a class="type" href="../../classes/panel/#">Panel</a></span>
+
+
+								<p>
+
+</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="SetOnClick">
+					<h1><span class="realm client"></span></span>mvp.MenuItem:SetOnClick(func)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/terminal/vgui/cl_menu_option.lua#L24">View source &raquo;</a>
+
+					<p>Sets the function that is called when this option is clicked.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
 
 					<ul>
 
@@ -1553,127 +1705,9 @@ SetVersion
 									<span class="tag"><span class="type">function</span></span>
 
 
-								<p> The function to call.</p>
-							</li>
-					</ul>
+								<p>
 
-					<ul>
-
-							<li>
-								<span class="tag parameter">customID</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-									<span class="tag default">optional</span>
-
-								<p> Custom ID for hook.</p>
-							</li>
-					</ul>
-
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a>
-
-								<p>The hook ID.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="Include">
-					<h1><span class="realm shared"></span></span>Module:Include(path)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L38">View source &raquo;</a>
-
-					<p>Includes a file relative to the module's directory.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">path</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The file to include.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="IncludeFolder">
-					<h1><span class="realm shared"></span></span>Module:IncludeFolder(path)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L49">View source &raquo;</a>
-
-					<p>Includes a folder relative to the module's directory.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">path</span>
-
-									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-
-
-								<p> The folder to include.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="SetDisabled">
-					<h1><span class="realm shared"></span></span>Module:SetDisabled(disabled)</h1>
-				</a>
-
-
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/meta/sh_module.lua#L101">View source &raquo;</a>
-
-					<p>Disables module.
- You need server restart to apply changes.</p>
-
-<p> This should be used only on server side to take effect, although it will work on client side too, but will have no effect.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">disabled</span>
-
-									<span class="tag"><span class="type">bool</span></span>
-
-
-								<p> Should module be disabled?</p>
+</p>
 							</li>
 					</ul>
 
