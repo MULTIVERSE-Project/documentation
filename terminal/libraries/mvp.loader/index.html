@@ -42,8 +42,8 @@
 
 										<li>
 											<span class="realm shared"></span>
-											<a href="../index/#mvp.loader.LoadClFile">
-LoadClFile
+											<a href="../index/#mvp.loader.LoadClientFile">
+LoadClientFile
 											</a>
 										</li>
 										<li>
@@ -60,14 +60,14 @@ LoadFolder
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../index/#mvp.loader.LoadShFile">
-LoadShFile
+											<a href="../index/#mvp.loader.LoadServerFile">
+LoadServerFile
 											</a>
 										</li>
 										<li>
 											<span class="realm shared"></span>
-											<a href="../index/#mvp.loader.LoadSvFile">
-LoadSvFile
+											<a href="../index/#mvp.loader.LoadSharedFile">
+LoadSharedFile
 											</a>
 										</li>
 
@@ -102,12 +102,12 @@ LoadSvFile
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="mvp.loader.LoadClFile">
-					<h1><span class="realm shared"></span></span>mvp.loader.LoadClFile(path, fromLuaFolder)</h1>
+				<a class="anchor" id="mvp.loader.LoadClientFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadClientFile(path, fromLuaFolder)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L25">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/sh_loader.lua#L25">View source &raquo;</a>
 
 					<p>Loads a file for the client.  Must be called on both the client and server.</p>
 			</header>
@@ -147,11 +147,11 @@ LoadSvFile
 		<section class="method">
 			<header>
 				<a class="anchor" id="mvp.loader.LoadFile">
-					<h1><span class="realm shared"></span></span>mvp.loader.LoadFile(path, realm)</h1>
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadFile(path, realm, fromLuaFolder)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L76">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/sh_loader.lua#L77">View source &raquo;</a>
 
 					<p>Loads a file based on the realm.  If the realm is not specified, it will try to guess it based on the file name.</p>
 
@@ -190,17 +190,30 @@ LoadSvFile
 							</li>
 					</ul>
 
+					<ul>
+
+							<li>
+								<span class="tag parameter">fromLuaFolder</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not ignore relative path and load from the lua/ folder directly.</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
 				<a class="anchor" id="mvp.loader.LoadFolder">
-					<h1><span class="realm shared"></span></span>mvp.loader.LoadFolder(path, realm)</h1>
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadFolder(path, realm, fromLuaFolder)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L90">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/sh_loader.lua#L94">View source &raquo;</a>
 
 					<p>Loads all files in folder recursively.  If the realm is not specified, it will try to guess it based on the file name. See <a href="../index/#mvp.loader.LoadFile">mvp.loader.LoadFile</a> for more info about file naming.</p>
 			</header>
@@ -234,19 +247,32 @@ LoadSvFile
 							</li>
 					</ul>
 
+					<ul>
+
+							<li>
+								<span class="tag parameter">fromLuaFolder</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not ignore relative path and load from the lua/ folder directly.</p>
+							</li>
+					</ul>
+
 
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="mvp.loader.LoadShFile">
-					<h1><span class="realm shared"></span></span>mvp.loader.LoadShFile(path, fromLuaFolder)</h1>
+				<a class="anchor" id="mvp.loader.LoadServerFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadServerFile(path, fromLuaFolder)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L41">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/sh_loader.lua#L57">View source &raquo;</a>
 
-					<p>Loads a file fir server and client.  Must be called on both the client and server.</p>
+					<p>Loads a file for the server.  Must be called on the server.</p>
 			</header>
 
 
@@ -283,14 +309,14 @@ LoadSvFile
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="mvp.loader.LoadSvFile">
-					<h1><span class="realm shared"></span></span>mvp.loader.LoadSvFile(path, fromLuaFolder)</h1>
+				<a class="anchor" id="mvp.loader.LoadSharedFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadSharedFile(path, fromLuaFolder)</h1>
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L57">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/sh_loader.lua#L41">View source &raquo;</a>
 
-					<p>Loads a file for the server.  Must be called on the server.</p>
+					<p>Loads a file fir server and client.  Must be called on both the client and server.</p>
 			</header>
 
 
