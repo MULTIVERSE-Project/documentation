@@ -40,6 +40,36 @@
 									<ul>
 
 
+										<li>
+											<span class="realm shared"></span>
+											<a href="../index/#mvp.loader.LoadClFile">
+LoadClFile
+											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../index/#mvp.loader.LoadFile">
+LoadFile
+											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../index/#mvp.loader.LoadFolder">
+LoadFolder
+											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../index/#mvp.loader.LoadShFile">
+LoadShFile
+											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="../index/#mvp.loader.LoadSvFile">
+LoadSvFile
+											</a>
+										</li>
 
 
 
@@ -68,6 +98,233 @@
 
 </p>
 
+	<h1 class="title">Functions</h1>
+
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.loader.LoadClFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadClFile(path, fromLuaFolder)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L25">View source &raquo;</a>
+
+					<p>Loads a file for the client.  Must be called on both the client and server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">path</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The path to the file, relative to the mvp/ folder.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fromLuaFolder</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not ignore relative path and load from the lua/ folder directly.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.loader.LoadFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadFile(path, realm)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L76">View source &raquo;</a>
+
+					<p>Loads a file based on the realm.  If the realm is not specified, it will try to guess it based on the file name.</p>
+
+<p> <code>sv_</code> prefix will load the file for the server only,
+ <code>cl_</code> prefix will load the file for the client only,
+ in other cases, it will load the file for both the server and client (<code>shared</code>).
+ </p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">path</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The path to the file, relative to the mvp/ folder.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">realm</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The realm to load the file for. Can be <code>server</code>, <code>client</code> or <code>shared</code>.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.loader.LoadFolder">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadFolder(path, realm)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L90">View source &raquo;</a>
+
+					<p>Loads all files in folder recursively.  If the realm is not specified, it will try to guess it based on the file name. See <a href="../index/#mvp.loader.LoadFile">mvp.loader.LoadFile</a> for more info about file naming.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">path</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The path to the folder, relative to the mvp/ folder.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">realm</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+									<span class="tag default">optional</span>
+
+								<p> The realm to load the files for. Can be <code>server</code>, <code>client</code> or <code>shared</code>.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.loader.LoadShFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadShFile(path, fromLuaFolder)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L41">View source &raquo;</a>
+
+					<p>Loads a file fir server and client.  Must be called on both the client and server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">path</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The path to the file, relative to the mvp/ folder.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fromLuaFolder</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not ignore relative path and load from the lua/ folder directly.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="mvp.loader.LoadSvFile">
+					<h1><span class="realm shared"></span></span>mvp.loader.LoadSvFile(path, fromLuaFolder)</h1>
+				</a>
+
+
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/lib/blob/v2/lua/mvp/core/sh_loader.lua#L57">View source &raquo;</a>
+
+					<p>Loads a file for the server.  Must be called on the server.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">path</span>
+
+									<span class="tag"><a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+
+
+								<p> The path to the file, relative to the mvp/ folder.</p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">fromLuaFolder</span>
+
+									<span class="tag"><span class="type">boolean</span></span>
+
+									<span class="tag default">default: false</span>
+
+								<p> Whether or not ignore relative path and load from the lua/ folder directly.</p>
+							</li>
+					</ul>
+
+
+
+		</section>
 
 					</div>
 			</article>
