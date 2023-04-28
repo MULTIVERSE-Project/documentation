@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 128px 0 128px 0;
+
+    background-color: rgb(5, 134, 209);
+
+    color: white;
+}
+
+.landing h2 {
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+
+    width: 80%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.docs-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    transition: box-shadow 0.2s ease-in-out,
+                transform 0.2s ease-in-out;
+}
+
+.docs-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
