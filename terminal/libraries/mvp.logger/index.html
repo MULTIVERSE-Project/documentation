@@ -174,10 +174,11 @@ New
 						<p>This is an internal function! You are able to use it, but you risk unintended side effects if used incorrectly.</p>
 					</div>
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/logger/sh_logger.lua#L37">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/logger/sh_logger.lua#L40">View source &raquo;</a>
 
 					<p>Initializes the logger.</p>
 			</header>
+
 
 
 
@@ -190,7 +191,7 @@ New
 				</a>
 
 
-					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/logger/sh_logger.lua#L18">View source &raquo;</a>
+					<a class="reference" href="https://github.com/MULTIVERSE-Project/terminal/blob/v2/lua/mvp/core/logger/sh_logger.lua#L21">View source &raquo;</a>
 
 					<p>Logs a message to all adapters.</p>
 			</header>
@@ -204,9 +205,10 @@ New
 							<li>
 								<span class="tag parameter">level</span>
 
+									<span class="tag"><span class="type">LOG_ENUM</span></span>
 
 
-								<p> The log level.</p>
+								<p> The log level. See ??? for available level enums.</p>
 							</li>
 					</ul>
 
@@ -222,7 +224,14 @@ New
 					</ul>
 
 
+				<h3>Example Usage</h3>
+					<pre><code>mvp.logger.Log(mvp.LOG_INFO, 'Hello, world!')
+</code></pre>
 
+
+				<h3>Usage (external files):</h3>
+					<pre><code><span class="keyword">local</span> test = <span class="string">"code"</span></code></pre>
+					<pre><code><span class="keyword">local</span> test = <span class="string">"code2"</span></code></pre>
 		</section>
 
 					</div>
