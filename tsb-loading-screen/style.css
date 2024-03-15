@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infopanel{
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 600px;
+    height: 100%;
+
+    background-color: rgba(30, 30, 30, .6);
+}
+.infopanel table{
+    margin: 0 auto;
+}
+.infopanel p#title {
+    text-transform: uppercase;
+    margin: 3% auto 0;
+    width: fit-content;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+.infopanel p#map {
+    max-width: 550px;
+    width: fit-content;
+    margin: 0 auto;
+
+    font-size: 21px;
+    text-align: center;
+}
+.infopanel p#map_sub {
+    max-width: 550px;
+    width: fit-content;
+    margin: 0 auto;
+
+    font-size: 12px;
+    text-align: center;
+}
+.infopanel p#description {
+    max-width: 550px;
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 0 15px;
+}
+.infopanel p#event {
+    max-width: 550px;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.infopanel img {
+    width: 512px;
+    margin: 0 auto;
+    display: block;
+}
+
+#logo {
+    margin-top: 15px;
+}
+
+.links {
+    width: 100%;
+    height: fit-content;
+
+    position: absolute;
+    bottom: 15px;
+}
+
+.links table{
+    margin: 0 auto;
+}
+
+.links table tr td{
+    vertical-align: top;
+}
+
+.links .icon{
+    width: 24px;
+    height: 24px;
+}
+
+.links div {
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.links div p{
+    justify-content: center;
+    -webkit-box-pack: center;
+    text-align: center;
+
+    height: fit-content;
+
+    margin: auto 0;
+    margin-left: 3px;
+}
+
+.links div span{
+    font-size: 26px;
+}
+
+.info {
+    position: absolute;
+
+    right: 10px;
+    top: 10px;
+}
+
+.info img {
+    height: 128px;
+}
